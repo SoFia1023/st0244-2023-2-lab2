@@ -18,7 +18,7 @@ next O = X
 next B = B
 next X = O
 
---Tablero vacío size x size
+--Tablero vacío size x size.
 empty :: Grid
 empty = replicate size (replicate size B)
 
@@ -54,7 +54,7 @@ diag g = [g !! n !! n | n <- [0 .. size - 1]]
 won :: Grid -> Bool
 won g = wins O g || wins X g
 
---Permite mostrar por consola el tablero de forma legible
+--Permite mostrar por consola el tablero de forma legible.
 putGrid :: Grid -> IO ()
 putGrid = putStrLn . unlines . concat . interleave bar . map showRow
   where
