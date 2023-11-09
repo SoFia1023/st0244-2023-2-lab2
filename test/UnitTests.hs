@@ -64,10 +64,12 @@ testWins :: Test
 testWins = TestList
     [ TestCase $ assertEqual "Jugador O gana" True (wins O [[O, X, X], [O, B, O], [O, X, B]])
     , TestCase $ assertEqual "Jugador X gana" True (wins X [[O, X, B], [X, X, X], [O, B, X]])
-    , TestCase $ assertEqual "Ningún jugador gana" False (wins O [[O, X, X], [X, O, X], [O, O, B])
+    , TestCase $ assertEqual "Ningún jugador gana" False (wins O [[O, X, X], [X, O, X], [O, O, B]])
     ]
 
 main :: IO Counts
 main = do
     runTestTT $ TestList [testValid, testFull, testWins]
+
     
+
