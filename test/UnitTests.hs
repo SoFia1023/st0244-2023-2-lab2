@@ -71,5 +71,3 @@ main :: IO Counts
 main = do
     runTestTT $ TestList [testValid, testFull, testWins]
 
-    
-
